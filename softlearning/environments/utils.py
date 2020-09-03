@@ -5,8 +5,9 @@ ADAPTERS = {
 }
 
 try:
-    from .adapters.dm_control_adapter import DmControlAdapter
-    ADAPTERS['dm_control'] = DmControlAdapter
+#    from .adapters.dm_control_adapter import DmControlAdapter
+#    ADAPTERS['dm_control'] = DmControlAdapter
+    pass
 except ModuleNotFoundError as e:
     if 'dm_control' not in e.msg:
         raise

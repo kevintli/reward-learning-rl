@@ -1,0 +1,14 @@
+softlearning run_example_local examples.classifier_rl \
+        --exp-name=vice-raq-baseline-push `# This is the name your experiment will be saved under ~/ray_results` \
+        --algorithm=VICERAQ  `# Algorithm of choice (ex: SAC, VICE, etc.)` \
+        --num-samples=2  `# Number of seeds PER choice of hyperparameters (will be multiplied by number of param combinations if you tune over a bunch)` \
+        --trial-gpus=1  `# Number of GPUs that will be utilized PER seed` \
+        --trial-cpus=2  `# Number of CPUs that will be utilized PER seed (doesn't really affect much)` \
+        --universe=multiworld  `# Environment universe (usually gym)` \
+        --task=Image48SawyerPushForwardEnv-v0  `# Training environment task` \
+        --video-save-frequency=20  `# Evaluation video save frequency (every _ iterations)` \
+        --checkpoint-frequency=20  `# Checkpoint frequency (every _ iterations)` \
+        --checkpoint-replay-pool=True  `# Whether or not to save the replay pool on checkpointing` \
+        --n_epochs=300  `# Num of epochs to run for` \
+        --n_goal_examples=10  `# Number of goal examples to collect for VICE` \
+        --active_query_frequency=10 \

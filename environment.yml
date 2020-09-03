@@ -1,4 +1,4 @@
-name: softlearning
+name: vice-raq
 channels:
 - defaults
 - conda-forge
